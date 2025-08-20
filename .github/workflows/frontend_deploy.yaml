@@ -42,7 +42,7 @@ jobs:
             pnpm run deploy:actions --project-name=$project_name --branch $frontend_branch
           else
             echo "Deploying branch production"
-            pnpm run deploy --project-name=$project_name
+            pnpm run deploy:actions --project-name=$project_name
           fi
           echo "Deploying production for ${{ github.ref_name }}"
           echo "Deployed for tag ${{ github.ref_name }}"
